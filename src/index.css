@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --primary: 222 47% 11%;
+    --card: 0 0% 100%;
+    --accent: 221 83% 53%;
+    --border: 214 32% 91%;
+  }
+
+  .dark {
+    --background: 222 84% 4.9%;
+    --primary: 210 40% 98%;
+    --card: 222 84% 4.9%;
+    --accent: 217 91% 60%;
+    --border: 217 32% 17%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-primary transition-colors duration-700;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    @apply selection:bg-accent/30 selection:text-primary;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .font-heading {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  /* Advanced Glassmorphism */
+  .glass {
+    @apply backdrop-blur-md bg-white/50 dark:bg-black/50 border border-white/20 dark:border-white/10;
+  }
+
+  .glass-dark {
+    @apply backdrop-blur-xl bg-black/40 border border-white/5;
+  }
+
+  /* High-Fidelity Grids */
+  .circuit-grid {
+    background-image:
+      linear-gradient(to right, currentColor 1px, transparent 1px),
+      linear-gradient(to bottom, currentColor 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(circle at center, black, transparent 80%);
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes pulse-soft {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes scan {
+    from {
+      transform: translateY(-100%);
+    }
+
+    to {
+      transform: translateY(100%);
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent/20 rounded-full hover:bg-accent/40 transition-colors;
+  }
+}
+
+@layer components {
+  .advanced-card {
+    @apply relative overflow-hidden rounded-[2.5rem] border border-primary/5 bg-card/40 backdrop-blur-sm transition-all duration-700 hover:border-accent/30 hover:shadow-[0_40px_100px_-20px_rgba(0, 0, 0, 0.1)];
+  }
+
+  .premium-gradient {
+    @apply bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px hsl(var(--accent) / 0.3);
+  }
+}
