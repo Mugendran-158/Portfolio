@@ -98,67 +98,8 @@ const GatewayContact = () => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-start">
-                {/* System Diagnostics Cluster */}
-                <div className="lg:col-span-4 space-y-12">
-                    <motion.div
-                        whileHover={{ scale: 1.02 }}
-                        className="p-12 rounded-[3.5rem] bg-primary text-background space-y-12 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] relative overflow-hidden group"
-                    >
-                        <div className="absolute -bottom-10 -right-10 opacity-5 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-1000">
-                            <ShieldCheck className="w-64 h-64" />
-                        </div>
-
-                        <div className="space-y-6 relative z-10">
-                            <div className="flex items-center gap-4 mb-4">
-                                <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse shadow-[0_0_15px_rgba(34,197,94,0.6)]" />
-                                <span className="text-[10px] font-black uppercase tracking-[0.5em] text-background/40">Portal: Active</span>
-                            </div>
-                            <h3 className="text-4xl font-black tracking-tighter leading-none italic">
-                                Secure Messaging
-                            </h3>
-                        </div>
-
-                        <div className="space-y-8 relative z-10">
-                            {[
-                                { icon: Zap, label: "Quantum Delivery" },
-                                { icon: Fingerprint, label: "Identity Verified" },
-                                { icon: Mail, label: "AES-256 Encrypted" }
-                            ].map((item, idx) => (
-                                <div key={idx} className="flex items-center gap-6 group/item">
-                                    <div className="p-4 rounded-2xl bg-white/5 border border-white/5 text-accent group-hover/item:bg-accent group-hover/item:text-white transition-all duration-500">
-                                        <item.icon className="w-6 h-6" />
-                                    </div>
-                                    <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/40 group-hover/item:text-white transition-colors duration-500">{item.label}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </motion.div>
-
-                    {/* Technical Metadata */}
-                    <div className="px-10 py-10 rounded-[2.5rem] border border-primary/5 space-y-8 bg-card/40 backdrop-blur-sm">
-                        <p className="text-[10px] font-black uppercase tracking-[0.6em] text-primary/20 flex items-center gap-4">
-                            <div className="w-1 h-4 bg-accent" />
-                            System Protocols
-                        </p>
-                        <div className="space-y-6 text-xs font-black text-primary/40 uppercase tracking-widest">
-                            <div className="flex justify-between items-center pb-4 border-b border-primary/5">
-                                <span>Payload Limit</span>
-                                <span className="text-primary tracking-normal font-bold lowercase">10.0 KB</span>
-                            </div>
-                            <div className="flex justify-between items-center pb-4 border-b border-primary/5">
-                                <span>Security Layer</span>
-                                <span className="text-accent">TLS 1.3</span>
-                            </div>
-                            <div className="flex justify-between items-center">
-                                <span>Availability</span>
-                                <span className="text-green-500/60 font-medium">99.9% Uptime</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 {/* Transmission Interface Console */}
-                <div className="lg:col-span-8">
+                <div className="lg:col-span-12 max-w-5xl mx-auto w-full">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.98 }}
                         animate={{ opacity: 1, scale: 1 }}
