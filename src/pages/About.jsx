@@ -49,7 +49,7 @@ const ExpertiseCard = ({ title, desc, icon: Icon }) => (
 
 const About = () => {
     return (
-        <div className="max-w-[1700px] mx-auto px-6 sm:px-10 lg:px-20 py-24 lg:py-48 relative min-h-screen">
+        <div className="max-w-[1700px] mx-auto px-6 sm:px-10 lg:px-20 pt-24 lg:pt-48 pb-12 lg:pb-24 relative">
             {/* Architectural Grid System */}
             <div className="absolute inset-0 circuit-grid opacity-[0.03] dark:opacity-[0.05] -z-10" />
 

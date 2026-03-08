@@ -63,7 +63,7 @@ const GatewayContact = () => {
     };
 
     return (
-        <div className="max-w-[1700px] mx-auto px-6 sm:px-10 lg:px-20 py-24 lg:py-48 relative min-h-screen">
+        <div className="max-w-[1700px] mx-auto px-6 sm:px-10 lg:px-20 pt-12 lg:pt-24 pb-24 lg:pb-48 relative">
             {/* Architectural Grid System */}
             <div className="absolute inset-0 circuit-grid opacity-[0.03] dark:opacity-[0.05] -z-10" />
 

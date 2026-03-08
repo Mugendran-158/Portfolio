@@ -156,7 +156,7 @@ const Projects = () => {
     ];
 
     return (
-        <div className="max-w-[1700px] mx-auto px-6 sm:px-10 lg:px-20 py-24 lg:py-48 relative min-h-screen">
+        <div className="max-w-[1700px] mx-auto px-6 sm:px-10 lg:px-20 pt-12 lg:pt-24 pb-12 lg:pb-24 relative">
             {/* Architectural Grid System */}
             <div className="absolute inset-0 circuit-grid opacity-[0.03] dark:opacity-[0.05] -z-10" />
 
@@ -208,7 +208,7 @@ const Projects = () => {
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="mt-48 text-center"
+                className="mt-24 text-center"
             >
                 <div className="h-[2px] w-24 bg-primary/5 mx-auto mb-12" />
                 <p className="text-[10px] font-black text-primary/20 uppercase tracking-[0.6em]">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, ShieldCheck, Zap, Layers, Cpu, Globe, Infinity, Activity, Database, Cloud } from 'lucide-react';
+import { ArrowRight, Download, ShieldCheck, Zap, Layers, Cpu, Globe, Infinity, Activity, Database, Cloud, Github, Linkedin, Mail } from 'lucide-react';
 
 const scrollTo = (id) => {
     const el = document.getElementById(id);
@@ -62,6 +62,40 @@ const Home = () => {
                         <p className="text-2xl sm:text-3xl text-primary/40 max-w-3xl mx-auto lg:mx-0 leading-tight font-medium tracking-tight">
                             I am <span className="text-primary font-black underline decoration-accent/20 underline-offset-8">Mugendraraja R</span>. A Full Stack Developer building scalable web applications and modern digital experiences.
                         </p>
+
+                        {/* High-Impact Social Connectivity */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.5 }}
+                            className="flex items-center justify-center lg:justify-start gap-6 pt-4"
+                        >
+                            <a
+                                href="https://github.com/Mugendran-158"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-5 rounded-2xl bg-primary/5 text-primary/30 hover:bg-accent hover:text-white transition-all duration-500 shadow-inner group/social relative overflow-hidden"
+                            >
+                                <Github className="w-6 h-6 relative z-10" />
+                                <div className="absolute inset-0 bg-accent translate-y-full group-hover/social:translate-y-0 transition-transform duration-500" />
+                            </a>
+                            <a
+                                href="https://linkedin.com/in/mugendran-r-158"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-5 rounded-2xl bg-primary/5 text-primary/30 hover:bg-accent hover:text-white transition-all duration-500 shadow-inner group/social relative overflow-hidden"
+                            >
+                                <Linkedin className="w-6 h-6 relative z-10" />
+                                <div className="absolute inset-0 bg-accent translate-y-full group-hover/social:translate-y-0 transition-transform duration-500" />
+                            </a>
+                            <a
+                                href="mailto:rmugendran2004@gmail.com"
+                                className="p-5 rounded-2xl bg-primary/5 text-primary/30 hover:bg-accent hover:text-white transition-all duration-500 shadow-inner group/social relative overflow-hidden"
+                            >
+                                <Mail className="w-6 h-6 relative z-10" />
+                                <div className="absolute inset-0 bg-accent translate-y-full group-hover/social:translate-y-0 transition-transform duration-500" />
+                            </a>
+                        </motion.div>
 
                         <div className="flex flex-col sm:flex-row gap-8 justify-center lg:justify-start pt-8">
                             <button
